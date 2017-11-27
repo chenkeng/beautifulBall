@@ -1,3 +1,7 @@
+首先在github上创建一个账户
+git remote add origin git@github.com:chenkeng/项目名字.git
+git push -u origin master
+
 从现在起，只要本地作了提交，就可以通过命令：
 
 $ git push origin master
