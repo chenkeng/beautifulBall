@@ -41,3 +41,13 @@ Warning: Permanently added 'github.com' (RSA) to the list of known hosts.
 此后，每次本地提交后，只要有必要，就可以使用命令git push origin master推送最新修改；
 分布式版本系统的最大好处之一是在本地工作完全不需要考虑远程库的存在，也就是有没有联网都可以正常工作，
 而SVN在没有联网的时候是拒绝干活的！当有网络的时候，再把本地提交推送一下就完成了同步，真是太方便了！
+
+
+建立分支
+git checkout -b dev    建立一个 叫 dev 的分支  并且将master指向dev分支
+相当于 以下两个命令
+git branch dev  建立分支
+git checkout dev  切换到dev 分支
+
+可以使用 git branch 查看当前有哪些分支，
+* 号代表着当前是哪个分支
