@@ -72,3 +72,4 @@ git checkout -b  分支名
 合并某分支到当前分支   git merge  某分支
 删除分支  git branch -d 分支名
 /***************总结 *******************/
+新增分支 featture
