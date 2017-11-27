@@ -51,3 +51,14 @@ git checkout dev  切换到dev 分支
 
 可以使用 git branch 查看当前有哪些分支，
 * 号代表着当前是哪个分支
+
+当 在 dev 分支上完成工作，并push 到远程仓库之。此时远程仓库可看到和master分支不一样的地方
+
+此时可以使用  git checkout master 切换回主分支
+然后 git merge dev   将dev 分支 合并到master 分支上去。 可以看到提示关键词  fast-forward
+直接将master 指向dev 当前分支，相当于快进
+这个时候 master 和 dev 分支的代码都一样 ， 也就是确认没问题之后，可以删除掉dev分支
+
+删除dev 分支    命令为     git branch -d dev
+删除后，此时用 git branch 查看 分支情况，可以发现只有 master 分支
+切换分支速度非常快，安全又保险。
