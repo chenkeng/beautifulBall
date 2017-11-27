@@ -62,3 +62,13 @@ git checkout dev  切换到dev 分支
 删除dev 分支    命令为     git branch -d dev
 删除后，此时用 git branch 查看 分支情况，可以发现只有 master 分支
 切换分支速度非常快，安全又保险。
+
+/***************总结 *******************/
+查看分支        git branch
+创建分支        git branch  分支名
+切换分支        git checkout  分支名
+///////创建和切换分支合并///////////
+git checkout -b  分支名
+合并某分支到当前分支   git merge  某分支
+删除分支  git branch -d 分支名
+/***************总结 *******************/
