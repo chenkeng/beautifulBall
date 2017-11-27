@@ -73,7 +73,12 @@ git checkout -b  分支名
 删除分支  git branch -d 分支名
 /***************总结 *******************/
 
-
-遇到冲突 解决方法
-
-
+遇到冲突 需要手动解决
+<<<<<<< HEAD
+主分支的内容
+=======
+新分支的内容
+>>>>>>> feature
+可以手动去掉一个，然后重新push 到主分支
+此命令可以查看分支合并图
+git log --graph --pretty=oneline --abbrev-commit
