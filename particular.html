@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+    // window.onload=function(){
+        var canvas=document.createElement("canvas"),
+            ctx=canvas.getContext("2d"),
+            particles={},
+            particleIndex=0,
+            particleNum=5;
+
+        canvas.width=400;
+        canvas.height=400;
+        document.body.appendChild(canvas);
+        ctx.fillStyle="black";
+        ctx.fillRect(0,0,canvas.width,canvas.height);
+            function Particle(){
+                this.x=canvas.width/2;
+                this.y=canvas.height/2;
+                this.vx=Math.random()*10-5;
+                this.vy=Math.random()*10-5;
+                particleIndex++;
+                particles[particleIndex]=this;
+                this.id=particleIndex;
+                this.life=0;
+                this.maxLife=Math.random()*30+50;
+                this.color="hsla("+parseInt(Math.random()*360)+",100%,50%,0.4)";
+            }
+            Particle.prototype.draw=function(){
+                this.x+=this.vx;
+                this.y+=this.vy;
+
+                if (Math.random()<0.05) {
+                    this.vx=Math.random()*10-5;
+                    this.vy=Math.random()*10-5;
+                }
+                this.life++;
+                if (this.life>=this.maxLife) {
+                    delete particles[this.id];
+                }
+                ctx.fillStyle=this.color;
+                ctx.fillRect(this.x,this.y,5,5);
+            };
+            setInterval(function(){
+                ctx.globalCompositeOperation="source-over";
+                ctx.fillStyle="rgba(0,0,0,0.2)";
+                ctx.fillRect(0,0,canvas.width,canvas.height);
+                for (var i = 0; i < particleNum; i++) {
+                    new Particle();
+                }
+                ctx.globalCompositeOperation="lighter";
+                for(var i in particles){
+                      particles[i].draw();
+                }
+            },30);
+    // };
+    </script></body>
+</html>
