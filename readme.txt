@@ -9,6 +9,7 @@ $ ssh-keygen -t rsa -C "youremail@example.com"
 由于这个Key也不是用于军事目的，所以也无需设置密码。
 如果一切顺利的话，可以在用户主目录里找到.ssh目录，里面有id_rsa和id_rsa.pub两个文件，
 这两个就是SSH Key的秘钥对，id_rsa是私钥，不能泄露出去，id_rsa.pub是公钥，可以放心地告诉任何人。
+在命令行里输入 cat ~/.ssh/id_rsa.pub 可以查看公钥
 
 第2步：登陆GitHub，打开账户设置“Account settings”，“SSH Keys”页面：
 然后，点“Add SSH Key”，填上任意Title，目的是区分在哪台终端上使用git，
