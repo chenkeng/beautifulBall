@@ -51,7 +51,9 @@ git checkout dev  切换到dev 分支
 
 可以使用 git branch 查看当前有哪些分支，
 * 号代表着当前是哪个分支
-
+git branch -a 查看本地和远程的所有分支
+git branch -d dev 删除本地dev 分支，
+git push origin --delete dev 删除github 上的远程分支 此时可以再用 git branch -a 查看所有的分支
 当 在 dev 分支上完成工作，并push 到远程仓库之。此时远程仓库可看到和master分支不一样的地方
 
 此时可以使用  git checkout master 切换回主分支
