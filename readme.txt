@@ -73,7 +73,9 @@ git push origin --delete dev 删除github 上的远程分支 此时可以再用 
 ///////创建和切换分支合并///////////
 git checkout -b  分支名
 合并某分支到当前分支   git merge  某分支
-删除分支  git branch -d 分支名
+删除本地分支  git branch -d 分支名
+删除远程分支  git push origin --delete 分支名
+查看本地和远程分支   git branch -a 
 /***************总结 *******************/
 
 遇到冲突 需要手动解决
